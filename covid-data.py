@@ -28,14 +28,14 @@ signature = site_update_time.upper() + '\nScript by Lauren Shver\nSource: ' + ur
 
 message = header + latest_news + active_text + recovered_text + signature
 
-receipients = ['lauren_shver@hotmail.com']
+# receipients = ['receipients/email/here'] #to be updated
 to = 'To: lauren-COVID19@outlook.com\n'
 subject = 'Subject: COVID-19 Info\n'
 
 smtpObj = smtplib.SMTP('smtp-mail.outlook.com')
 smtpObj.starttls()
 smtpObj.ehlo()
-smtpObj.login('lauren-COVID19@outlook.com', 'covid19!Data!auto')
+# smtpObj.login('email', 'password')
 smtpObj.sendmail('lauren-COVID19@outlook.com', receipients, to + subject + message)
 smtpObj.quit()
 
